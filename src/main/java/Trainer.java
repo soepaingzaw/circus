@@ -10,9 +10,9 @@ public class Trainer {
         getToSpeak(a);
 
         Duck d2 = (Duck) a; // downcasting
-        train(new Duck());
-        // train(new Parrot());
-        Animal a2 = new Animal();
+        //train(new Duck());
+        train(new Parrot());
+        //Animal a2 = new Animal();
         Bird b2 = new Bird();
     }
 
@@ -21,7 +21,11 @@ public class Trainer {
     }
 
     private static void train(Bird bird) {
-        Duck d = (Duck) bird;
-        d.swim();
+        if (bird instanceof Duck) {
+
+            Duck d = (Duck) bird;
+
+            d.swim();
+        }
     }
 }
